@@ -1,0 +1,222 @@
+<!doctype html>
+<html lang="pt-BR">
+<head>
+<meta charset="utf8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Campanhas de Outubro · Araruama</title>
+<meta name="robots" content="noindex, nofollow, noarchive">
+<style>
+  :root {
+    --ground:#F4EEE3; --raised:#FBF7EF; --raised-2:#F7F0E3; --ink:#1E1A12; --ink-soft:#52493B; --ink-faint:#857866;
+    --line:#DFD7C6; --line-soft:#EAE2D2;
+    --accent:#C63D2F; --accent-deep:#A02A20; --accent-soft:#C63D2F55; --accent-bg:#C63D2F14;
+    --tmk:#8a2e3a; --tmk-bg:#8a2e3a14; --tmk-soft:#8a2e3a55;
+    --gold:#C08A2E; --warn:#B06A1E; --warn-bg:#B06A1E1a; --ok:#3F7A48; --ok-bg:#3F7A481a;
+    --shadow:0 1px 2px #1e1a1210, 0 8px 24px -12px #1e1a1224;
+    --serif:Georgia,'Times New Roman',serif;
+    --sans:-apple-system,BlinkMacSystemFont,'Segoe UI',Roboto,Helvetica,Arial,sans-serif;
+    --mono:ui-monospace,'SF Mono',Menlo,Consolas,monospace;
+    --maxw:820px;
+  }
+  @media (prefers-color-scheme: dark) {
+    :root {
+      --ground:#12100B; --raised:#1B1710; --raised-2:#221D15; --ink:#F1E8D9; --ink-soft:#C4B6A3; --ink-faint:#8B7C69;
+      --line:#332A20; --line-soft:#261F18;
+      --accent:#E56A5D; --accent-deep:#F0857A; --accent-soft:#E56A5D55; --accent-bg:#E56A5D18;
+      --tmk:#d98b97; --tmk-bg:#d98b9718; --tmk-soft:#d98b9755;
+      --gold:#E0AC5B; --warn:#E0A560; --warn-bg:#E0A56018; --ok:#79AE76; --ok-bg:#79AE7618;
+      --shadow:0 1px 2px #0000004d, 0 10px 30px -14px #00000080;
+    }
+  }
+  :root[data-theme="light"] {
+    --ground:#F4EEE3; --raised:#FBF7EF; --raised-2:#F7F0E3; --ink:#1E1A12; --ink-soft:#52493B; --ink-faint:#857866;
+    --line:#DFD7C6; --line-soft:#EAE2D2;
+    --accent:#C63D2F; --accent-deep:#A02A20; --accent-soft:#C63D2F55; --accent-bg:#C63D2F14;
+    --tmk:#8a2e3a; --tmk-bg:#8a2e3a14; --tmk-soft:#8a2e3a55;
+    --gold:#C08A2E; --warn:#B06A1E; --warn-bg:#B06A1E1a; --ok:#3F7A48; --ok-bg:#3F7A481a;
+    --shadow:0 1px 2px #1e1a1210, 0 8px 24px -12px #1e1a1224;
+  }
+  :root[data-theme="dark"] {
+    --ground:#12100B; --raised:#1B1710; --raised-2:#221D15; --ink:#F1E8D9; --ink-soft:#C4B6A3; --ink-faint:#8B7C69;
+    --line:#332A20; --line-soft:#261F18;
+    --accent:#E56A5D; --accent-deep:#F0857A; --accent-soft:#E56A5D55; --accent-bg:#E56A5D18;
+    --tmk:#d98b97; --tmk-bg:#d98b9718; --tmk-soft:#d98b9755;
+    --gold:#E0AC5B; --warn:#E0A560; --warn-bg:#E0A56018; --ok:#79AE76; --ok-bg:#79AE7618;
+    --shadow:0 1px 2px #0000004d, 0 10px 30px -14px #00000080;
+  }
+
+  * { box-sizing:border-box; }
+  html { scroll-behavior:smooth; }
+  body { margin:0; background:var(--ground); color:var(--ink); font-family:var(--sans); line-height:1.6; -webkit-font-smoothing:antialiased; }
+  .wrap { max-width:var(--maxw); margin:0 auto; padding:0 22px; }
+
+  .topbar { position:sticky; top:0; z-index:20; background:color-mix(in srgb, var(--ground) 88%, transparent); backdrop-filter:blur(8px); border-bottom:1px solid var(--line-soft); }
+  .topbar .wrap { display:flex; align-items:center; justify-content:space-between; height:52px; }
+  .brandmark { font-family:var(--serif); font-weight:700; letter-spacing:.01em; font-size:15px; display:flex; align-items:center; gap:8px; }
+  .brandmark .sw { width:10px; height:10px; border-radius:999px; background:var(--accent); }
+  .toggle { border:1px solid var(--line); background:var(--raised); color:var(--ink-soft); font-family:var(--sans); font-size:12px; padding:6px 12px; border-radius:999px; cursor:pointer; }
+
+  .hero { padding:48px 0 32px; border-bottom:1px solid var(--line-soft); }
+  .eyebrow { font-size:12px; letter-spacing:.16em; text-transform:uppercase; color:var(--accent-deep); font-weight:700; }
+  .hero h1 { font-family:var(--serif); font-weight:700; font-size:clamp(32px,7vw,52px); line-height:1.02; margin:14px 0 10px; letter-spacing:-0.02em; }
+  .lede { font-size:16px; color:var(--ink-soft); max-width:58ch; margin:0; }
+
+  section { padding:36px 0; border-bottom:1px solid var(--line-soft); }
+  .sechead { display:flex; align-items:center; gap:12px; margin:0 0 6px; }
+  .brandbadge { width:28px; height:28px; border-radius:999px; display:inline-flex; align-items:center; justify-content:center; font-size:14px; flex:none; background:var(--accent-bg); border:1px solid var(--accent-soft); }
+  .brandbadge.tmk { background:var(--tmk-bg); border-color:var(--tmk-soft); }
+  h2 { font-family:var(--serif); font-weight:700; font-size:clamp(23px,4.2vw,30px); margin:0; letter-spacing:-0.01em; }
+  h2.tmk { color:var(--tmk); }
+  .subhead { color:var(--ink-soft); font-size:14.5px; margin:0 0 20px; max-width:64ch; }
+
+  .benefit { background:var(--raised); border:1px solid var(--line); border-radius:14px; overflow:hidden; box-shadow:var(--shadow); margin-bottom:14px; }
+  .benefit .bhead { display:flex; align-items:center; gap:11px; padding:13px 18px; background:var(--accent-bg); border-bottom:1px solid var(--line-soft); }
+  .benefit.tmk .bhead { background:var(--tmk-bg); }
+  .benefit .bhead .bic { font-size:21px; line-height:1; flex:none; }
+  .benefit .bhead .bt { font-family:var(--serif); font-size:18px; font-weight:700; }
+  .benefit .bhead .bt small { display:block; font-family:var(--sans); font-size:11px; font-weight:700; letter-spacing:.07em; text-transform:uppercase; color:var(--accent-deep); }
+  .benefit.tmk .bhead .bt small { color:var(--tmk); }
+  .benefit .bbody { padding:14px 18px 16px; }
+  p.plain { font-size:14px; color:var(--ink-soft); margin:0 0 10px; }
+  p.plain:last-child { margin-bottom:0; }
+  p.plain strong { color:var(--ink); }
+
+  .tickets { display:grid; grid-template-columns:1fr; gap:10px; margin-top:4px; }
+  @media (min-width:560px) { .tickets { grid-template-columns:1fr 1fr; } }
+  .ticket { background:var(--raised-2); border:2px dashed var(--accent-soft); border-radius:12px; padding:13px 15px; }
+  .ticket.tmk { border-color:var(--tmk-soft); }
+  .tcode { font-family:var(--mono); font-size:15px; font-weight:700; color:var(--accent-deep); letter-spacing:.02em; }
+  .ticket.tmk .tcode { color:var(--tmk); }
+  .tval { font-size:14px; color:var(--ink); font-weight:700; margin:4px 0 3px; }
+  .tdesc { font-size:12.5px; color:var(--ink-soft); }
+
+  .pending { display:inline-flex; align-items:center; gap:6px; font-size:11px; font-weight:700; color:var(--warn); background:var(--warn-bg); border:1px dashed var(--warn); padding:3px 9px; border-radius:999px; white-space:nowrap; margin-top:10px; }
+
+  footer { padding:30px 0 50px; }
+  .stamp { font-size:12px; color:var(--ink-faint); }
+</style>
+</head>
+<body>
+
+<div class="topbar">
+  <div class="wrap">
+    <span class="brandmark"><span class="sw"></span>Araruama · Campanhas de Outubro</span>
+    <button class="toggle" id="tt" aria-label="Alternar tema">◐ Tema</button>
+  </div>
+</div>
+
+<header class="hero">
+  <div class="wrap">
+    <div class="eyebrow">Øliver's + Temakeria Universitária · Outubro 2026</div>
+    <h1>Campanhas de outubro, Araruama</h1>
+    <p class="lede">Resumo objetivo das datas, benefícios e cupons do mês para o time de Araruama. Cupons e preços confirmados pela Aline via Sults.</p>
+  </div>
+</header>
+
+<section id="olivers">
+  <div class="wrap">
+    <div class="sechead"><span class="brandbadge">🍕</span><h2>Øliver's</h2></div>
+    <p class="subhead">Três datas no mês: Dia das Crianças, Dia do Professor e Halloween.</p>
+
+    <div class="benefit">
+      <div class="bhead"><span class="bic">🧒</span><div class="bt"><small>10 a 12/10</small>Dia das Crianças</div></div>
+      <div class="bbody">
+        <p class="plain">Criança monta a própria pizza doce (granulado ou M&amp;M's) no rodízio ou no à la carte.</p>
+        <div class="tickets">
+          <div class="ticket">
+            <div class="tcode">CRIANÇAOLV</div>
+            <div class="tval">R$15 de desconto</div>
+            <div class="tdesc">Pedido mínimo R$99,90. Válido de 10 a 12/10.</div>
+          </div>
+          <div class="ticket">
+            <div class="tcode">Item 01</div>
+            <div class="tval">Pizza doce kids</div>
+            <div class="tdesc">Pequena R$41,90 · Média R$59,90</div>
+          </div>
+        </div>
+        <p class="plain" style="margin-top:10px;"><strong>Item 02:</strong> Combo Pizza Salgada Gigante + Pizza Doce Pequena kids, R$119,90. Sabores da salgada iguais ao Combo Celestial, com meio a meio liberado.</p>
+      </div>
+    </div>
+
+    <div class="benefit">
+      <div class="bhead"><span class="bic">📚</span><div class="bt"><small>15/10</small>Dia do Professor</div></div>
+      <div class="bbody">
+        <div class="tickets">
+          <div class="ticket">
+            <div class="tcode">PROFESSOR</div>
+            <div class="tval">R$10 de desconto</div>
+            <div class="tdesc">Pedido mínimo R$79,90. Válido só no dia 15.</div>
+          </div>
+        </div>
+        <span class="pending">⏳ Rodízio: precificação fecha quinta 08/10, condição vem em seguida</span>
+      </div>
+    </div>
+
+    <div class="benefit">
+      <div class="bhead"><span class="bic">🎃</span><div class="bt"><small>29 a 31/10</small>Halloween, Øliver's After Dark</div></div>
+      <div class="bbody">
+        <div class="tickets">
+          <div class="ticket">
+            <div class="tcode">TRAVESSURA</div>
+            <div class="tval">R$15 de desconto</div>
+            <div class="tdesc">Pedido mínimo R$99,90. 3 dias porque o 31 é sábado e a casa já enche.</div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section id="temakeria">
+  <div class="wrap">
+    <div class="sechead"><span class="brandbadge tmk">🍣</span><h2 class="tmk">Temakeria Universitária</h2></div>
+    <p class="subhead">Inauguração + duas datas de outubro, já com cupom próprio de Araruama.</p>
+
+    <div class="benefit tmk">
+      <div class="bhead"><span class="bic">🎉</span><div class="bt"><small>09/10</small>Inauguração de Araruama</div></div>
+      <div class="bbody">
+        <div class="tickets">
+          <div class="ticket tmk">
+            <div class="tcode">AMOTEMAKERIA</div>
+            <div class="tval">R$10 de desconto</div>
+            <div class="tdesc">Pedido mínimo R$59,90.</div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="benefit tmk">
+      <div class="bhead"><span class="bic">🧒</span><div class="bt"><small>12/10</small>Dia das Crianças</div></div>
+      <div class="bbody">
+        <div class="tickets">
+          <div class="ticket tmk">
+            <div class="tcode">DIA12</div>
+            <div class="tval">R$8 de desconto</div>
+            <div class="tdesc">Pedido mínimo R$69,90. Válido só em São Gonçalo.</div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="benefit tmk">
+      <div class="bhead"><span class="bic">📚</span><div class="bt"><small>15/10</small>Dia dos Professores</div></div>
+      <div class="bbody">
+        <div class="tickets">
+          <div class="ticket tmk">
+            <div class="tcode">PROFESSOR</div>
+            <div class="tval">R$8 de desconto</div>
+            <div class="tdesc">Pedido mínimo R$69,90.</div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<footer><div class="wrap">
+  <p class="stamp">Øliver's + Temakeria Universitária · campanhas de outubro, pro time de Araruama · cupons confirmados pela Aline via Sults · gerado em outubro/2026</p>
+</div></footer>
+
+<script>(function(){var b=document.getElementById('tt');if(!b)return;b.addEventListener('click',function(){var r=document.documentElement;var c=r.getAttribute('data-theme');if(!c)c=(window.matchMedia&&window.matchMedia('(prefers-color-scheme: dark)').matches)?'dark':'light';r.setAttribute('data-theme',c==='dark'?'light':'dark');});})();</script>
+</body>
+</html>
